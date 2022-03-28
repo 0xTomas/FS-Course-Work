@@ -1,0 +1,25 @@
+{
+  "name": "fs-course-work",
+  "version": "1.0.0",
+  "description": "Codecademy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0xTomas/FS-Course-Work.git"
+  },
+  "keywords": [
+    "FS"
+  ],
+  "author": "0xTomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0xTomas/FS-Course-Work/issues"
+  },
+  "homepage": "https://github.com/0xTomas/FS-Course-Work#readme",
+  "dependencies": {
+    "prettier": "^2.6.1"
+  }
+}

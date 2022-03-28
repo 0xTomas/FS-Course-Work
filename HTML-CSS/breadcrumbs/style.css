@@ -14,9 +14,11 @@
     margin-right: 15px;
     padding: 0 5px;
 }
+
 .breadcrumb .attribute a {
     background-color: inherit;
 }
+
 .breadcrumb .location a::before,
 .breadcrumb .location a::after {
     content: "";
@@ -31,22 +33,25 @@
     border-color: transparent;
     border-left-color: darkcyan;
 }
+
 .breadcrumb .location a::before {
     left: -10px;
     border-left-color: transparent;
 }
 
-.attribute a{
+.attribute a {
     color: gray;
 }
 
 .breadcrumb .location a:hover {
     background-color: blue;
 }
+
 .breadcrumb .location a:hover::before {
     border-color: blue;
     border-left-color: transparent;
 }
+
 .breadcrumb .location a:hover::after {
     border-left-color: blue;
 }
