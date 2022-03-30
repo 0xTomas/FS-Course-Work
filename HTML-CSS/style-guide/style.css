@@ -1,0 +1,92 @@
+h1 {
+    font-size: 24px;
+    text-align: center;
+    font-family: "PSL Ornanong Pro", sans-serif;
+}
+
+h2 {
+    font-size: 20px;
+    text-align: left;
+    font-family: "PSL Ornanong Pro", sans-serif;
+    margin-left: 10px;
+}
+
+.container {
+    border: 1px solid slategrey;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.color-text {
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-family: "PSL Ornanong Pro", sans-serif;
+    text-align: center;
+}
+
+.color-panel {
+    margin: 10px;
+    color: white;
+    border-radius: 5px;
+    width: 125px;
+    height: 90px;
+    display: inline-block;
+}
+
+.color-text.p {
+    text-align: center;
+}
+
+.color-panel.blue {
+    background-color: #3B5998;
+}
+
+.color-panel.purple {
+    background-color: #800080;
+}
+
+.color-panel.green {
+    background-color: #2e8b57;
+}
+
+.color-panel.grey {
+    background-color: #708090;
+}
+
+.text-panel {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    text-align: center;
+}
+
+.text-panel.font-one {
+    font-family: "PSL Ornanong Pro", sans-serif;
+}
+
+.text-panel.font-two {
+    font-family: "Noto Sans Kayah Li", sans-serif;
+}
+
+.text-panel.font-three {
+    font-family: "Chalkduster", sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+    text-align: center;
+}
+
+.normal {
+    text-align: center;
+}
+
+.italics {
+    font-style: italic;
+    text-align: center;
+}

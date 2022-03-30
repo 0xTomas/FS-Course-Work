@@ -19,7 +19,7 @@
     "url": "https://github.com/0xTomas/FS-Course-Work/issues"
   },
   "homepage": "https://github.com/0xTomas/FS-Course-Work#readme",
-  "dependencies": {
+  "devDependencies": {
     "prettier": "^2.6.1"
   }
 }
