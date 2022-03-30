@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Helvetica", serif;
+    font-size: 22px;
+    color: seashell;
+    background-color: black;
+    opacity: 0.9;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+    width: 100%;
+    background-color: black;
+    z-index: 1;
+}
+
+section {
+    margin-top: 50px;
+}
+
+#logo-container {
+    display: inline-flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-top: 0;
+}
+
+.logo {
+    margin-left: 10px;
+    height: 50px;
+}
+
+nav {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.nav a {
+    display: inline-block;
+    color: seashell;
+    padding: 0 5px;
+    margin-left: 10px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("./img-mission-background.webp") center no-repeat;
+    height: 700px;
+}
+
+.main-container {
+    align-items: center;
+    background-color: black;
+    opacity: 0.75;
+    width: 1200px;
+}
+
+.main h2 {
+    margin-top: 15px;
+}
+
+.main h4 {
+    margin-bottom: 15px;
+}
+
+#tea-of-month {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#teas {
+    margin-top: 25px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tea img {
+    height: 200px;
+    width: 300px;
+}
+
+.tea h4 {
+    margin: 10px;
+}
+
+#locations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    background: url("./img-locations-background.webp") center no-repeat;
+}
+
+#locations h2 {
+    flex: 1 1 100%;
+    align-self: flex-end;
+    margin-bottom: 30px;
+}
+
+.location {
+   align-self: flex-start;
+    background-color: black;
+    width: 300px;
+    margin: 15px 20px;
+    line-height: 2;
+    padding: 10px 0;
+}
+
+#details {
+    background-color: seashell;
+    color: black;
+    line-height: 2;
+}
+
+#footer {
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: right;
+}
