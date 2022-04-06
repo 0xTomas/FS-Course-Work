@@ -1,0 +1,313 @@
+html, body {
+    overflow-x: hidden;
+}
+
+html {
+    font-family: GrotesqueMTStd,Arial,sans-serif;
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    height: 68px;
+    align-items: center;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    left: 0;
+    padding: 0 50px;
+    index: 99;
+}
+
+ul#header-main-menu {
+    margin: 0;
+}
+
+.header-logo-container {
+    display: flex;
+    height: 32px;
+    width: 32px;
+}
+
+.change-green {
+    filter: invert(60%) sepia(15%) saturate(1216%) hue-rotate(26deg) brightness(87%) contrast(84%);
+}
+
+.header-menu li {
+    padding: 0 20px;
+    list-style: none;
+    display: flex;
+}
+
+.header-menu li a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    font-family: Knockout, serif;
+    font-size: 1.45rem;
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+    line-height: .8;
+    font-weight: 200;
+    justify-content: center;
+    padding: 26px 0 24px;
+    transition: .3s ease;
+}
+
+.header-menu li a:hover {
+    color: #898f4b;
+}
+
+.header-menu {
+    padding: 0 20px;
+    flex-grow: 1;
+    height: 100%;
+    max-width: 75%;
+}
+
+#header-main-menu {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    transition: .3s ease;
+}
+
+#header-main-menu li  {
+    border-bottom: 2px solid transparent;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+#header-main-menu li:hover {
+    border-bottom: 2px solid #898f4b;
+}
+
+.user-controls-ul {
+    display: flex;
+    align-items: center;
+}
+
+.user-controls-ul li {
+    padding: 0 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    background-image: url("https://camposcoffee.com/wp-content/uploads/2021/09/Website-Launch.jpg");
+    height: 950px;
+    display: flex;
+    border-bottom-right-radius: 50% 3em;
+    border-bottom-left-radius: 50% 3em;
+    margin-left: 0;
+}
+
+.block-element-main {
+    margin-top: 465px;
+    margin-left: 80px;
+}
+
+h1.content-title {
+    font-size: 5.25rem;
+    color: white;
+    font-family: Knockout, serif;
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+    line-height: .8;
+    font-weight: 400;
+}
+
+.shop-button {
+    background-color: #898f4b;
+    border-color: #898f4b;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 165px;
+    width: 100px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    transition: 0.3s;
+}
+
+.shop-button:hover {
+    background-color: #677c1b;
+    border-color: #677c1b;
+}
+
+a.shop-button-text {
+    text-decoration: none;
+    color: white;
+    font-family: Geneva, serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .shop-button {
+        padding: 2px 64px 0;
+        font-size: .875rem;
+        height: 5rem;
+        margin-bottom: 40px;
+    }
+}
+
+.block-element {
+    margin-left: 80px;
+}
+
+.div-container {
+    padding: 80px 0;
+}
+
+h2 {
+    font-family: Knockout, serif;
+    color: black;
+    font-size: 3.5rem;
+    size: 60px;
+}
+
+.heading-box {
+    width: 390px;
+    line-height: 1;
+}
+
+.paragraph-box {
+    line-height: 1.6;
+    font-family: 'Geneva', serif;
+    width: 460px;
+}
+
+a.block-link {
+    font-family: Knockout, serif;
+    color: black;
+    font-size: 1.5rem;
+    margin-top: 35px;
+    transition: .3s;
+}
+
+a.block-link:hover {
+    color: #898f4b;
+    cursor: pointer;
+}
+
+#buy {
+    padding-top: 45px;
+}
+
+.featured-products-box {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+.product-box {
+    width: 300px;
+    height: auto;
+    margin: 0 20px 0 0;
+    box-shadow: 0 2px 2px 2px lightgray;
+    border-radius: 5px;
+}
+
+.product-card__image__img {
+    justify-content: center;
+    z-index: 3;
+    height: 200px;
+    margin-left: 50px;
+}
+
+.product-content {
+    padding: 0 16px 16px;
+ }
+
+.product-price, .product-description {
+    font-family: Geneva, serif;
+    font-size: 14px
+}
+
+.product-title {
+    font-family: Knockout, serif;
+    font-size: 24px;
+    letter-spacing: .0625rem;
+}
+
+.product-card__image__background {
+    z-index: 1;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    transition-delay: 0s;
+}
+
+.product-card__image__background:hover {
+    color: black;
+    top: 0;
+    left: -25%;
+    right: -25%;
+    bottom: 20%;
+}
+
+.bottom-bar {
+    background-color: #898f4b;
+    height: 360px;
+}
+
+.block {
+    display: flex;
+    margin-top: 50px;
+    margin-left: 80px;
+    justify-content: space-between;
+    align-items: ;
+}
+
+.cell {
+    margin-top: 45px;
+    padding-right: 20px;
+    padding-left: 20px;
+    color: white;
+    align-items: center;
+    text-align: center;
+}
+
+#cell-heading {
+    color: white;
+    font-family: Knockout, serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+    line-height: .8;
+    font-weight: 400;
+    padding: 0 16px 40px;
+}
+
+#stay-in-touch {
+    font-size: 5.25rem;
+    color: white;
+    font-family: Knockout, serif;
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+    line-height: .8;
+    font-weight: 400;
+}
+
+.footer-image {
+    margin-top: 60px;
+    width: 200px;
+}
+
+#foot {
+    font-family: Geneva, serif;
+    font-size: 16px;
+    align-items: center;
+    text-transform: uppercase;
+}
