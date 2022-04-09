@@ -267,19 +267,20 @@ a.block-link:hover {
     margin-top: 50px;
     margin-left: 80px;
     justify-content: space-between;
-    align-items: ;
 }
 
 .cell {
+    display: flex;
+    flex-direction: column;
     margin-top: 45px;
     padding-right: 20px;
     padding-left: 20px;
     color: white;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
-#cell-heading {
+.cell-heading {
     color: white;
     font-family: Knockout, serif;
     font-size: 24px;
@@ -287,10 +288,13 @@ a.block-link:hover {
     letter-spacing: .0625rem;
     line-height: .8;
     font-weight: 400;
-    padding: 0 16px 40px;
 }
 
-#stay-in-touch {
+.stay-in-touch {
+    max-width: 168px;
+}
+
+#stay-in-touch-h1 {
     font-size: 5.25rem;
     color: white;
     font-family: Knockout, serif;
@@ -298,16 +302,49 @@ a.block-link:hover {
     letter-spacing: .0625rem;
     line-height: .8;
     font-weight: 400;
+    margin-top: 10px;
 }
 
 .footer-image {
-    margin-top: 60px;
-    width: 200px;
+    width: 250px;
 }
 
 #foot {
     font-family: Geneva, serif;
     font-size: 16px;
-    align-items: center;
+    align-items: flex-start;
     text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+.cell a {
+    font-family: Geneva, serif;
+    font-size: 14px;
+    align-items: flex-start;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+li.menu-social-link {
+    padding: 6px 0;
+}
+
+ul.menu-social {
+    display: block;
+    text-align: start;
+    list-style-type: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}
+
+.arrow {
+    width: 10px;
+    height: 10px;
+    display: none;
 }
