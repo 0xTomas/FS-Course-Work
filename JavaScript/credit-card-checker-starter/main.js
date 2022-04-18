@@ -33,27 +33,22 @@ const isAValidCreditCard = array => {
     console.log(array)
 
     let double = false
-    let sum = 0
 
-    array.forEach(i => {
-        if (double === false) {
-            sum += i
-            console.log(`Using the number ${i}.`)
+    // Finding the sum using reduce ()
+
+    const sum = valid1.reduce((total, currentNumber, currentIndex) => {
+        let index = 0
+        // console.log(total)
+        if (currentIndex % 2 === 0) {
+            return total + currentNumber
         } else {
-            if (i >= 5) {
-                sum += (i * 2) - 9
-                console.log(`Using the number ${i}.`)
+            if (currentNumber >= 5) {
+                return total + (currentNumber * 2) - 9
             } else {
-                sum += (i * 2)
-                console.log(`Using the number ${i}.`)
+                return total + currentNumber * 2
             }
         }
-
-    // If the 'double' variable is false, switch it to true.
-    // double = false === double;
-    double = !double
-        console.log(sum)
-    })
+    }, 0)
 
     if (sum % 10 === 0) {
         console.log(`The card is valid. The sum is ${sum}`)
@@ -119,11 +114,25 @@ const convertStringToArray = string => {
 
 const convertInvalidToValid = array => {
 
-    let sum = 0
     let numberToAdd
     let double = false
 
-    // for (let i = array.length - 1; i >= 0; i--) {
+
+    const sum = valid1.reduce((total, currentNumber, currentIndex) => {
+        let index = 0
+        // console.log(total)
+        if (currentIndex % 2 === 0) {
+            return total + currentNumber
+        } else {
+            if (currentNumber >= 5) {
+                return total + (currentNumber * 2) - 9
+            } else {
+                return total + currentNumber * 2
+            }
+        }
+    }, 0)
+
+    /*
     array.forEach(i => {
         if (!double) {
             sum += i
@@ -133,11 +142,12 @@ const convertInvalidToValid = array => {
             } else {
                 sum += (i * 2)
             }
-        }
+        } */
+
         // If the 'double' variable is false, switch it to true.
         // double = false === double;
         double = !double
-    })
+
 
     let difference = sum % 10 // 5
     console.log(`The sum was ${sum}, the difference was ${difference} and the last digit was a ${array[array.length - 1]}.`)
