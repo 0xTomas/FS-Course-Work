@@ -34,8 +34,8 @@ const validateCred = array => {
     let numberToAdd
     let double = false
 
-    for (let i = array.length - 1; i >= 0; i--) {
-
+    // for (let i = array.length - 1; i >= 0; i--) {
+    array.forEach(i => {
         if (double === false) {
             sum += array[i]
         } else {
@@ -48,7 +48,8 @@ const validateCred = array => {
     // If the 'double' variable is false, switch it to true.
     // double = false === double;
     double = !double
-    }
+    })
+
     if (sum % 10 === 0) {
         console.log('The card is valid.')
     } else {
@@ -116,8 +117,8 @@ const convertInvalidToValid = array => {
     let numberToAdd
     let double = false
 
-    for (let i = array.length - 1; i >= 0; i--) {
-
+    // for (let i = array.length - 1; i >= 0; i--) {
+    array.forEach(i => {
         if (double === false) {
             sum += array[i]
         } else {
@@ -130,7 +131,7 @@ const convertInvalidToValid = array => {
         // If the 'double' variable is false, switch it to true.
         // double = false === double;
         double = !double
-    }
+    })
 
     let difference = sum % 10 // 5
     console.log(`The sum was ${sum}, the difference was ${difference} and the last digit was a ${array[array.length - 1]}.`)
