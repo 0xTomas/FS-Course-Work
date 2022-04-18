@@ -14,4 +14,24 @@ const sum = valid1.reduce((total, currentNumber, currentIndex) => {
     }
 }, 0)
 
-console.log(sum)
+const people = [
+    { name: "Kyle", age: 29},
+    { name: "Toma", age: 29},
+    { name: "Matt", age: 31},
+    { name: "Niko", age: 31},
+]
+
+const result = people.reduceRight((groupedPeople, person) => {
+    const age = person.age
+    // If statement with strange syntax?
+    if (groupedPeople[age] == null) groupedPeople[age] = []
+    groupedPeople[age].push(person)
+    return groupedPeople
+}, {})
+
+console.log(result)
+
+const num1 = 8
+const num2 = 12
+
+if (num1 > num2) num2 += 1
