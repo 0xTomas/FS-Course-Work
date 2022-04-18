@@ -30,31 +30,21 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 const isAValidCreditCard = array => {
 
-    // Reverse the array
+    // Finding the sum of the credit card number using reduce()
 
-    array = array.reverse()
-    console.log(`Here is the card number in reverse [${array}]`)
+    const sum = array.reduceRight((total, currentNumber, currentIndex) => {
 
-    // Finding the sum using reduce ()
-
-    const sum = array.reduce((total, currentNumber, currentIndex) => {
-        if (currentIndex % 2 === 0) {
-            return total + currentNumber
-        } else {
-            if (currentNumber >= 5) {
-                return total + (currentNumber * 2) - 9
-            } else {
-                return total + currentNumber * 2
-            }
-        }
+        // The Luhn algorithm performs a modulus 10 checksum.
+        if (currentIndex % 2 === 0) return total + currentNumber
+        // Double the value of every second digit.
+        else return currentNumber >= 5 ? total + (currentNumber * 2) - 9 : total + currentNumber * 2
     }, 0)
 
     if (sum % 10 === 0) {
         console.log(`The card is valid. The sum is ${sum}.`)
     } else {
         console.log(`The card is invalid. The sum is ${sum}.`)
-    }
-    return sum % 10 === 0
+    } return sum % 10 === 0
 }
 
 // Find invalid card function:
@@ -63,7 +53,6 @@ const findInvalidCard = nestedArray => {
 
     let invalidList = []
     array.forEach(i => {
-    // for (let i=0; i < nestedArray.length; i++) {
         if (!validateCred(nestedArray[i])) {
             invalidList.push(nestedArray[i])
         }
@@ -116,22 +105,14 @@ const convertInvalidToValid = array => {
     let numberToAdd
     let double = false
 
-
-    const sum = valid1.reduce((total, currentNumber, currentIndex) => {
-        let index = 0
+    const sum = array.reduce((total, currentNumber, currentIndex) => {
         // console.log(total)
-        if (currentIndex % 2 === 0) {
-            return total + currentNumber
-        } else {
-            if (currentNumber >= 5) {
-                return total + (currentNumber * 2) - 9
-            } else {
-                return total + currentNumber * 2
-            }
-        }
+        if (currentIndex % 2 === 0) return total + currentNumber
+        else return currentNumber >= 5 ? total + (currentNumber * 2) - 9 : total + currentNumber * 2
     }, 0)
 
-    /*
+    /* Using forEach function:
+
     array.forEach(i => {
         if (!double) {
             sum += i
@@ -142,10 +123,6 @@ const convertInvalidToValid = array => {
                 sum += (i * 2)
             }
         } */
-
-        // If the 'double' variable is false, switch it to true.
-        // double = false === double;
-        double = !double
 
 
     let difference = sum % 10 // 5
@@ -177,7 +154,7 @@ const testString = convertStringToArray('123456789012345')
 
 isAValidCreditCard(valid1)
 
-//convertInvalidToValid(mystery5)
+
 
 
 
