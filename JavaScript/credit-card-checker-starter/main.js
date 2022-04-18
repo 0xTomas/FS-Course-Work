@@ -63,11 +63,12 @@ const validateCred = array => {
 const findInvalidCard = nestedArray => {
 
     let invalidList = []
-    for (let i=0; i < nestedArray.length; i++) {
+    array.forEach(i => {
+    // for (let i=0; i < nestedArray.length; i++) {
         if (!validateCred(nestedArray[i])) {
             invalidList.push(nestedArray[i])
         }
-    }
+    })
     return invalidList
 }
 
@@ -119,7 +120,7 @@ const convertInvalidToValid = array => {
 
     // for (let i = array.length - 1; i >= 0; i--) {
     array.forEach(i => {
-        if (double === false) {
+        if (!double) {
             sum += array[i]
         } else {
             if (array[i] >= 5) {
