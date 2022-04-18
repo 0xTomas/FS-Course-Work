@@ -37,8 +37,6 @@ const isAValidCreditCard = array => {
     // Finding the sum using reduce ()
 
     const sum = valid1.reduce((total, currentNumber, currentIndex) => {
-        let index = 0
-        // console.log(total)
         if (currentIndex % 2 === 0) {
             return total + currentNumber
         } else {
