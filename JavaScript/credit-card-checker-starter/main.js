@@ -29,10 +29,11 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 // Validate credit card function:
 
 const isAValidCreditCard = array => {
-    array = array.reverse()
-    console.log(array)
 
-    let double = false
+    // Reverse the array
+
+    array = array.reverse()
+    console.log(`Here is the card number in reverse [${array}]`)
 
     // Finding the sum using reduce ()
 
@@ -49,9 +50,9 @@ const isAValidCreditCard = array => {
     }, 0)
 
     if (sum % 10 === 0) {
-        console.log(`The card is valid. The sum is ${sum}`)
+        console.log(`The card is valid. The sum is ${sum}.`)
     } else {
-        console.log(`The card is invalid. The sum is ${sum}`)
+        console.log(`The card is invalid. The sum is ${sum}.`)
     }
     return sum % 10 === 0
 }
