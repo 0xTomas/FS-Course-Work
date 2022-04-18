@@ -28,32 +28,37 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Validate credit card function:
 
-const validateCred = array => {
+const isAValidCreditCard = array => {
+    array = array.reverse()
+    console.log(array)
 
-    let sum = 0
-    let numberToAdd
     let double = false
+    let sum = 0
 
-    // for (let i = array.length - 1; i >= 0; i--) {
     array.forEach(i => {
         if (double === false) {
-            sum += array[i]
+            sum += i
+            console.log(`Using the number ${i}.`)
         } else {
-            if (array[i] >= 5) {
-                sum += (array[i] * 2) - 9
+            if (i >= 5) {
+                sum += (i * 2) - 9
+                console.log(`Using the number ${i}.`)
             } else {
-                sum += (array[i] * 2)
+                sum += (i * 2)
+                console.log(`Using the number ${i}.`)
             }
         }
+
     // If the 'double' variable is false, switch it to true.
     // double = false === double;
     double = !double
+        console.log(sum)
     })
 
     if (sum % 10 === 0) {
-        console.log('The card is valid.')
+        console.log(`The card is valid. The sum is ${sum}`)
     } else {
-        console.log('The card is invalid.')
+        console.log(`The card is invalid. The sum is ${sum}`)
     }
     return sum % 10 === 0
 }
@@ -121,12 +126,12 @@ const convertInvalidToValid = array => {
     // for (let i = array.length - 1; i >= 0; i--) {
     array.forEach(i => {
         if (!double) {
-            sum += array[i]
+            sum += i
         } else {
-            if (array[i] >= 5) {
-                sum += (array[i] * 2) - 9
+            if (i >= 5) {
+                sum += (i * 2) - 9
             } else {
-                sum += (array[i] * 2)
+                sum += (i * 2)
             }
         }
         // If the 'double' variable is false, switch it to true.
@@ -138,7 +143,7 @@ const convertInvalidToValid = array => {
     console.log(`The sum was ${sum}, the difference was ${difference} and the last digit was a ${array[array.length - 1]}.`)
 
     let changed = false
-    if (!validateCred(array)) {
+    if (!isAValidCreditCard(array)) {
         if (array[array.length - 1] >= difference) {
             array[array.length - 1] = array[array.length - 1] - difference
             changed = true
@@ -161,9 +166,9 @@ const convertInvalidToValid = array => {
 
 const testString = convertStringToArray('123456789012345')
 
-validateCred(testString)
+isAValidCreditCard(valid1)
 
-convertInvalidToValid(mystery5)
+//convertInvalidToValid(mystery5)
 
 
 
